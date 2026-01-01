@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const WHATSAPP_NUMBER = "5534996470196";
 const WHATSAPP_MESSAGE = "Olá! Gostaria de solicitar um orçamento.";
@@ -17,6 +18,8 @@ export const WhatsAppButton = ({
   variant = "inline",
   children,
 }: WhatsAppButtonProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   const handleClick = () => {
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
@@ -26,10 +29,28 @@ export const WhatsAppButton = ({
     return (
       <button
         onClick={handleClick}
-        className={`fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-whatsapp text-primary-foreground shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl animate-bounce-subtle ${className}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-whatsapp text-primary-foreground shadow-xl transition-all duration-300 hover:shadow-2xl ${
+          isHovered ? "pr-6 pl-4" : "p-4"
+        } ${className}`}
         aria-label="Contato via WhatsApp"
+        style={{
+          boxShadow: "0 4px 20px hsl(142 70% 45% / 0.4)",
+        }}
       >
-        <MessageCircle className="h-8 w-8" />
+        <div className="relative">
+          <MessageCircle className="h-7 w-7" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-primary-foreground rounded-full animate-ping" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-primary-foreground rounded-full" />
+        </div>
+        <span 
+          className={`font-semibold whitespace-nowrap transition-all duration-300 ${
+            isHovered ? "opacity-100 max-w-40" : "opacity-0 max-w-0"
+          } overflow-hidden`}
+        >
+          Fale Conosco
+        </span>
       </button>
     );
   }
@@ -40,9 +61,9 @@ export const WhatsAppButton = ({
         onClick={handleClick}
         variant="heroCta"
         size="xl"
-        className={className}
+        className={`group ${className}`}
       >
-        <MessageCircle className="h-6 w-6" />
+        <MessageCircle className="h-6 w-6 transition-transform group-hover:scale-110" />
         {children || "Quero um Orçamento Rápido no WhatsApp"}
       </Button>
     );
@@ -53,9 +74,9 @@ export const WhatsAppButton = ({
       onClick={handleClick}
       variant="whatsapp"
       size="lg"
-      className={className}
+      className={`group ${className}`}
     >
-      <MessageCircle className="h-5 w-5" />
+      <MessageCircle className="h-5 w-5 transition-transform group-hover:scale-110" />
       {children || "Falar no WhatsApp"}
     </Button>
   );
