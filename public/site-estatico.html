@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidraçaria Civil | Box, Sacadas e Espelhos em Uberaba-MG</title>
+  <meta name="description" content="Vidraçaria Civil - Especialistas em Box para Banheiro, Fechamento de Sacadas e Espelhos em Uberaba-MG. Instalação rápida, limpa e garantida. Solicite seu orçamento!">
+  <meta name="keywords" content="vidraçaria, box banheiro, fechamento sacada, espelhos, vidro temperado, Uberaba, MG">
+  <meta name="author" content="Vidraçaria Civil">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Vidraçaria Civil | Box, Sacadas e Espelhos em Uberaba-MG">
+  <meta property="og:description" content="Vidraçaria Civil - Especialistas em Box para Banheiro, Fechamento de Sacadas e Espelhos em Uberaba-MG. Instalação rápida, limpa e garantida. Solicite seu orçamento!">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset e Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    :root {
+      --background: #ffffff;
+      --foreground: #0a0a0a;
+      --primary: #008080;
+      --primary-dark: #006666;
+      --primary-light: #00a0a0;
+      --muted: #f5f5f5;
+      --muted-foreground: #737373;
+      --border: #e5e5e5;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #128C7E;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+    
+    .header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+    
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--foreground);
+    }
+    
+    .logo-text span {
+      color: var(--primary);
+    }
+    
+    .nav {
+      display: none;
+    }
+    
+    @media (min-width: 768px) {
+      .nav {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+    
+    .nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted-foreground);
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    .nav a:hover,
+    .nav a.active {
+      color: var(--primary);
+    }
+    
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+    
+    .nav a:hover::after,
+    .nav a.active::after {
+      width: 100%;
+    }
+    
+    .header-cta {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .header-cta {
+        display: block;
+      }
+    }
+    
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--foreground);
+      transition: all 0.3s ease;
+    }
+    
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 128, 128, 0.3);
+    }
+    
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white;
+    }
+    
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+    }
+    
+    .btn-hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      padding: 1.25rem 2.5rem;
+      font-size: 1.125rem;
+      box-shadow: 0 10px 40px rgba(0, 128, 128, 0.4);
+    }
+    
+    .btn-hero:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(0, 128, 128, 0.5);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 128, 128, 0.4));
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: white;
+      padding: 4rem 0;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--whatsapp);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--primary-light), #4ade80);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      opacity: 0.9;
+    }
+    
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    @media (min-width: 640px) {
+      .hero-cta {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .hero-stat {
+      text-align: center;
+    }
+    
+    .hero-stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary-light);
+    }
+    
+    .hero-stat-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 6rem 0;
+      background: var(--muted);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-badge {
+      display: inline-block;
+      background: rgba(0, 128, 128, 0.1);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title span {
+      color: var(--primary);
+    }
+    
+    .section-subtitle {
+      color: var(--muted-foreground);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .services-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .service-card {
+      background: white;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.5s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+    }
+    
+    .service-card-image {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+    }
+    
+    .service-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .service-card:hover .service-card-image img {
+      transform: scale(1.1);
+    }
+    
+    .service-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    }
+    
+    .service-card-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .service-card-content {
+      padding: 1.5rem;
+    }
+    
+    .service-card-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    
+    .service-card p {
+      color: var(--muted-foreground);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    
+    /* Transformation Section */
+    .transformation {
+      padding: 6rem 0;
+      overflow: hidden;
+    }
+    
+    .transformation-grid {
+      display: grid;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    @media (min-width: 1024px) {
+      .transformation-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .transformation-image {
+      position: relative;
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+    
+    .transformation-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    
+    .transformation-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 128, 128, 0.2), transparent);
+    }
+    
+    .transformation-content h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    
+    .transformation-content h2 span {
+      color: var(--primary);
+    }
+    
+    .transformation-content p {
+      color: var(--muted-foreground);
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    
+    .transformation-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .transformation-feature {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: var(--muted);
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .transformation-feature:hover {
+      background: rgba(0, 128, 128, 0.1);
+      transform: translateX(10px);
+    }
+    
+    .transformation-feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+    
+    .transformation-feature span {
+      font-weight: 600;
+    }
+    
+    /* Authority Section */
+    .authority {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, var(--foreground), #1a1a1a);
+      color: white;
+    }
+    
+    .authority-grid {
+      display: grid;
+      gap: 4rem;
+    }
+    
+    @media (min-width: 1024px) {
+      .authority-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+    }
+    
+    .authority-content h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    
+    .authority-content h2 span {
+      color: var(--primary-light);
+    }
+    
+    .authority-content p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+    
+    .authority-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .authority-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .authority-feature:hover {
+      background: rgba(0, 128, 128, 0.2);
+      border-color: var(--primary);
+      transform: translateX(10px);
+    }
+    
+    .authority-feature-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+    
+    .authority-feature h4 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .authority-feature p {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
+    }
+    
+    .authority-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    
+    .authority-stat {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .authority-stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary-light);
+      margin-bottom: 0.5rem;
+    }
+    
+    .authority-stat-label {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    /* Testimonials Section */
+    .testimonials {
+      padding: 6rem 0;
+      background: var(--muted);
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 128, 128, 0.1);
+    }
+    
+    .testimonial-stars {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .testimonial-star {
+      color: #fbbf24;
+      font-size: 1.25rem;
+    }
+    
+    .testimonial-quote {
+      color: var(--muted-foreground);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    
+    .testimonial-author-info h4 {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    .testimonial-author-info p {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--foreground);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-cta {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 2rem;
+      margin-bottom: 4rem;
+    }
+    
+    .footer-cta h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-cta p {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+      }
+    }
+    
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 1rem;
+      line-height: 1.7;
+    }
+    
+    .footer-title {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-light);
+    }
+    
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .footer-contact-icon {
+      color: var(--primary-light);
+    }
+    
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.875rem;
+    }
+    
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--whatsapp);
+      color: white;
+      padding: 1rem;
+      border-radius: 9999px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+      padding-right: 1.5rem;
+    }
+    
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .whatsapp-float-text {
+      display: none;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    
+    .whatsapp-float:hover .whatsapp-float-text {
+      display: block;
+    }
+    
+    .whatsapp-pulse {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    /* Scroll to Top Button */
+    .scroll-top {
+      position: fixed;
+      bottom: 6rem;
+      right: 1.5rem;
+      z-index: 999;
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .scroll-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 128, 128, 0.4);
+    }
+    
+    .scroll-top.visible {
+      display: flex;
+    }
+    
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+    }
+    
+    .mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-menu a {
+      display: block;
+      padding: 1rem;
+      font-weight: 500;
+      color: var(--foreground);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .mobile-menu a:hover {
+      color: var(--primary);
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="12" fill="#008080"/>
+            <path d="M25 75L50 25L75 75" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M35 55H65" stroke="white" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">Vidraçaria <span>Civil</span></span>
+        </a>
+        
+        <nav class="nav">
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        
+        <a href="https://wa.me/5534996470196?text=Olá! Gostaria de solicitar um orçamento." target="_blank" class="btn btn-primary header-cta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          Orçamento
+        </a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+      <a href="https://wa.me/5534996470196?text=Olá! Gostaria de solicitar um orçamento." target="_blank" class="btn btn-whatsapp" style="margin-top: 1rem; width: 100%;">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=80" alt="Banheiro moderno com box de vidro temperado">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-in-up">
+          <span class="hero-badge-dot"></span>
+          Atendendo Uberaba e Região
+        </div>
+        
+        <h1 class="animate-fade-in-up delay-100">
+          Transforme sua Casa com a <span>Elegância e Segurança</span> do Vidro Temperado
+        </h1>
+        
+        <p class="animate-fade-in-up delay-200">
+          Especialistas em Fechamento de Sacadas, Box de Banheiro e Espelhos em Uberaba. 
+          Instalação rápida, limpa e garantida.
+        </p>
+        
+        <div class="hero-cta animate-fade-in-up delay-300">
+          <a href="https://wa.me/5534996470196?text=Olá! Gostaria de solicitar um orçamento rápido." target="_blank" class="btn btn-hero">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            Quero um Orçamento Rápido no WhatsApp
+          </a>
+          
+          <a href="#servicos" class="btn btn-outline" style="color: white; border-color: white;">
+            Conhecer Serviços
+          </a>
+        </div>
+        
+        <div class="hero-stats animate-fade-in-up delay-400">
+          <div class="hero-stat">
+            <div class="hero-stat-number">500+</div>
+            <div class="hero-stat-label">Projetos Entregues</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">15+</div>
+            <div class="hero-stat-label">Anos de Experiência</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">100%</div>
+            <div class="hero-stat-label">Clientes Satisfeitos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Nossos Serviços</span>
+        <h2 class="section-title">Soluções <span>Premium</span> para seu Lar</h2>
+        <p class="section-subtitle">
+          Trabalhamos com os melhores materiais e técnicas para entregar acabamento perfeito em cada projeto.
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Box para Banheiro">
+            <div class="service-card-overlay"></div>
+            <span class="service-card-badge">Mais Vendido</span>
+          </div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18"/>
+                <path d="M9 21V9"/>
+              </svg>
+            </div>
+            <h3>Box para Banheiro</h3>
+            <p>Acabe com o chão molhado. Opções em vidro incolor, fumê e kits modernos (Elegance/Versatik). Instalação limpa e precisa.</p>
+          </div>
+        </div>
+        
+        <!-- Service Card 2 -->
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Fechamento de Sacadas">
+            <div class="service-card-overlay"></div>
+            <span class="service-card-badge">Premium</span>
+          </div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3>Fechamento de Sacadas</h3>
+            <p>Amplie sua sala e proteja contra chuva e vento. Sistema de abertura total para aproveitar cada momento.</p>
+          </div>
+        </div>
+        
+        <!-- Service Card 3 -->
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80" alt="Espelhos e Decoração">
+            <div class="service-card-overlay"></div>
+          </div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+            </div>
+            <h3>Espelhos e Decoração</h3>
+            <p>Amplitude e sofisticação para todos os ambientes. Espelhos lapidados e bisotados sob medida.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformation Section -->
+  <section class="transformation" id="sobre">
+    <div class="container">
+      <div class="transformation-grid">
+        <div class="transformation-image">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Sacada gourmet com fechamento em vidro">
+          <div class="transformation-image-overlay"></div>
+        </div>
+        
+        <div class="transformation-content">
+          <span class="section-badge">Por que Vidro?</span>
+          <h2>Valorize seu <span>Imóvel</span> Instantaneamente</h2>
+          <p>
+            O vidro não é apenas um detalhe, é o acabamento que define o luxo da sua casa. 
+            Trabalhamos com materiais de alta resistência e vedação perfeita para garantir 
+            conforto térmico e acústico em todos os seus ambientes.
+          </p>
+          
+          <div class="transformation-features">
+            <div class="transformation-feature">
+              <div class="transformation-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <span>Vidro Temperado de Alta Resistência</span>
+            </div>
+            <div class="transformation-feature">
+              <div class="transformation-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
+              <span>Conforto Térmico e Acústico</span>
+            </div>
+            <div class="transformation-feature">
+              <div class="transformation-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <span>Valorização do Imóvel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authority Section -->
+  <section class="authority">
+    <div class="container">
+      <div class="authority-grid">
+        <div class="authority-content">
+          <span class="section-badge" style="background: rgba(0, 160, 160, 0.2);">Diferenciais</span>
+          <h2>Por que escolher a <span>Vidraçaria Civil</span>?</h2>
+          <p>
+            Com mais de 15 anos de experiência, entregamos qualidade e compromisso em cada projeto. 
+            Nossa equipe própria garante excelência do início ao fim.
+          </p>
+          
+          <div class="authority-features">
+            <div class="authority-feature">
+              <div class="authority-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Vidros Certificados</h4>
+                <p>Têmperas de qualidade com certificação e garantia de fábrica.</p>
+              </div>
+            </div>
+            
+            <div class="authority-feature">
+              <div class="authority-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Equipe Própria</h4>
+                <p>Profissionais treinados e especializados, sem terceirização.</p>
+              </div>
+            </div>
+            
+            <div class="authority-feature">
+              <div class="authority-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Entrega no Prazo</h4>
+                <p>Compromisso com datas combinadas e sem surpresas.</p>
+              </div>
+            </div>
+            
+            <div class="authority-feature">
+              <div class="authority-feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Garantia Total</h4>
+                <p>Garantia de instalação, vedação e satisfação.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="authority-stats">
+          <div class="authority-stat">
+            <div class="authority-stat-number">500+</div>
+            <div class="authority-stat-label">Projetos Entregues</div>
+          </div>
+          <div class="authority-stat">
+            <div class="authority-stat-number">15+</div>
+            <div class="authority-stat-label">Anos de Experiência</div>
+          </div>
+          <div class="authority-stat">
+            <div class="authority-stat-number">100%</div>
+            <div class="authority-stat-label">Clientes Satisfeitos</div>
+          </div>
+          <div class="authority-stat">
+            <div class="authority-stat-number">24h</div>
+            <div class="authority-stat-label">Resposta Rápida</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Depoimentos</span>
+        <h2 class="section-title">O que nossos <span>clientes</span> dizem</h2>
+        <p class="section-subtitle">
+          A satisfação dos nossos clientes é nossa maior conquista. Veja o que eles falam sobre nosso trabalho.
+        </p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+          </div>
+          <p class="testimonial-quote">
+            "Instalaram o box do meu banheiro em menos de 2 horas e deixaram tudo limpo. 
+            A equipe foi super pontual e profissional. Recomendo demais!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div class="testimonial-author-info">
+              <h4>Mariana Silva</h4>
+              <p>Uberaba - MG</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+          </div>
+          <p class="testimonial-quote">
+            "O fechamento da minha sacada ficou impecável! Agora posso aproveitar 
+            o espaço em qualquer clima. Valorizou muito meu apartamento."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div class="testimonial-author-info">
+              <h4>Roberto Mendes</h4>
+              <p>Uberaba - MG</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+            <span class="testimonial-star">★</span>
+          </div>
+          <p class="testimonial-quote">
+            "Excelente atendimento do orçamento até a instalação. O espelho 
+            da sala ficou perfeito, exatamente como eu imaginava. Nota 10!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">C</div>
+            <div class="testimonial-author-info">
+              <h4>Carla Ferreira</h4>
+              <p>Uberaba - MG</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contato">
+    <div class="container">
+      <div class="footer-cta">
+        <h2>Seu projeto merece o melhor acabamento</h2>
+        <p>Entre em contato agora e receba um orçamento personalizado sem compromisso.</p>
+        <a href="https://wa.me/5534996470196?text=Olá! Gostaria de falar com um especialista." target="_blank" class="btn btn-whatsapp" style="font-size: 1.125rem; padding: 1.25rem 2.5rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          Falar com Especialista Agora
+        </a>
+      </div>
+      
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="display: inline-flex;">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" rx="12" fill="#008080"/>
+              <path d="M25 75L50 25L75 75" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35 55H65" stroke="white" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+            <span class="logo-text" style="color: white;">Vidraçaria <span>Civil</span></span>
+          </a>
+          <p>
+            Há mais de 15 anos transformando ambientes com elegância, segurança e qualidade. 
+            Somos referência em vidraçaria em Uberaba e região.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Serviços</h4>
+          <ul class="footer-links">
+            <li><a href="#servicos">Box para Banheiro</a></li>
+            <li><a href="#servicos">Fechamento de Sacadas</a></li>
+            <li><a href="#servicos">Espelhos Decorativos</a></li>
+            <li><a href="#servicos">Vidros Temperados</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Links Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Contato</h4>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>(34) 99647-0196</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Uberaba - MG</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 Vidraçaria Civil. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5534996470196?text=Olá! Gostaria de solicitar um orçamento." target="_blank" class="whatsapp-float" aria-label="Contato via WhatsApp">
+    <span class="whatsapp-pulse"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+    </svg>
+    <span class="whatsapp-float-text">Fale Conosco</span>
+  </a>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+    
+    // Header scroll effect
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Scroll to top button
+    const scrollTop = document.getElementById('scrollTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        scrollTop.classList.add('visible');
+      } else {
+        scrollTop.classList.remove('visible');
+      }
+    });
+    
+    scrollTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav a');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
